@@ -1,0 +1,27 @@
+.DS_Store
+
+
+# dependencies
+client/node_modules
+client/yarn.lock
+
+# production
+client/build
+
+# misc
+client/npm-debug.log*
+client/yarn-debug.log*
+client/yarn-error.log*
+client/.pnp
+client/.pnp.js
+
+# testing
+/client/coverage
+
+# production
+/build
+
+client/npm-debug.log*
+client/yarn-debug.log*
+client/yarn-error.log*
+
