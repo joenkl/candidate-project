@@ -1,7 +1,22 @@
+import {useEffect} from 'react';
 import logo from './logo.svg';
+import {api} from './helpers/api';
 import './App.css';
 
 function App() {
+
+  useEffect(()=>{
+    let request = async () =>{
+         try {
+          const response = await api.health();
+          console.log(response.data);
+         }catch(err){
+           console.log(err);
+         }
+    };
+    request();
+  },[]);
+
   return (
     <div className="App">
       <header className="App-header">

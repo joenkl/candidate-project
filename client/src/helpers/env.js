@@ -1,0 +1,9 @@
+export const environment = {
+    service:  { 
+        base: process.env.REACT_APP_SERVICE_BASE_URL,
+        routes: {
+            health: process.env.REACT_APP_HEALTH_ROUTE,
+        }
+    },
+    
+}
