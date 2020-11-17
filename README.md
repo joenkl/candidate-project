@@ -61,6 +61,46 @@ At this point you should have a server running on port `localhost:8000` and a cl
 
 You should now be able to navigate to `localhost:3000/` in your browser. The browsers console should print the resutl from the health endpoint if everything is working
 
-### Troubleshooting
+### Go installation for Mac
+    
+ Install Golang  
+    ```sh 
+        brew update 
+    ```
+    ```sh 
+        brew install go
+    ```
+ Copy and Paste the following environment values to ~/.bash_profile 
+    ```sh
+        export GOPATH=$HOME/go 
+    ```    
+    ```sh 
+        export GOROOT=/usr/local/opt/go/libexec
+    ```
+    ```sh
+        export PATH=$PATH:$GOPATH/bin
+    ```
+    ```sh 
+        export PATH=$PATH:$GOROOT/bin
+    ```
+ Update your environment values 
+    ```sh 
+        source ~/.bash_profile
+    ```
+ Make a directory for your Golang projects with this exact path
+    ```sh 
+        mkdir -p ~/go/src/crownsterlingllc/
+    ```
+ Change directory into ~/go/src/crownsterlingllc/
+    ```sh 
+        cd ~/go/src/crownsterlingllc/
+    ```
+ Clone this project
+    ```sh  
+        git clone https://github.com/PROJECT_URL
+    ```
 
-If you have any issues getting the project set up, feel free to email me at <jl@crownsterling.io>.
+### Questions or Issues
+If you have any issues or questions about the project set up, feel free to email me at <jl@crownsterling.io>.
+
+
