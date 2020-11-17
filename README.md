@@ -25,9 +25,9 @@ Provided in the repo are found different sub-folders of importance:
 
 The `client` folder is the front-end, which is bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-The `server-js` folder is a basic express app which runs on port `8000` and will connect to MongoDB on `localhost:27017` (which is set up with docker). This contains some pre-existing data that is stored in the `data` folder.
+The `server-js` folder is the server, which is bootstrapped with [Express](https://expressjs.com/), that runs on port `8000` and will connect to MongoDB on `localhost:27017` (which is set up with docker). This contains some pre-existing data that is stored in the `data` folder.
 
-The `server-go` folder is the server, which is bootstrapped with [ Gin-Gonic](https://github.com/gin-gonic/gin), which runs on port `8000` and will connect to MongoDB on `localhost:27017` (which is set up with docker). This contains some pre-existing data that is stored in the `data` folder.
+The `server-go` folder is the server, which is bootstrapped with [ Gin-Gonic](https://github.com/gin-gonic/gin), that runs on port `8000` and will connect to MongoDB on `localhost:27017` (which is set up with docker). This contains some pre-existing data that is stored in the `data` folder.
 
 
 ### To be done before interview
