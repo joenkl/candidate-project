@@ -36,7 +36,7 @@ Before the interview, please go ahead with running the setup script.
 
 In order to validate that you are properly setup after running the setup script you can perform the following steps:
 
-- Open two terminal windows (one for the client, one for the server)
+- Open two terminal windows (one for the client, one for the server).
 - NOTE: You will be asked to pick either the Go or JS server as part of the coding practice. It's your choice.
 
 Window 1: (if Go)
@@ -59,10 +59,10 @@ npm run start
 
 At this point you should have a server running on port `localhost:8000` and a client running on `localhost:3000`
 
-You should now be able to navigate to `localhost:3000/` in your browser. The browsers console should print the resutl from the health endpoint if everything is working
+You should now be able to navigate to `localhost:3000/` in your browser. The browsers console should print the result from the health endpoint if everything is working.
 
 ### Go installation for Mac
-Copy and paste the following in you terminal 
+Copy and paste the following in you terminal.
 NOTE: last command needs the project url: 
  
 ```sh 
