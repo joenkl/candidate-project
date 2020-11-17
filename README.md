@@ -62,7 +62,8 @@ At this point you should have a server running on port `localhost:8000` and a cl
 You should now be able to navigate to `localhost:3000/` in your browser. The browsers console should print the resutl from the health endpoint if everything is working
 
 ### Go installation for Mac
-Copy and paste the following: 
+Copy and paste the following in you terminal 
+NOTE: last command needs the project url: 
  
 ```sh 
 brew update    
