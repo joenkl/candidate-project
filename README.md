@@ -19,12 +19,16 @@ You should have the following installed on your machine:
 Provided in the repo are found different sub-folders of importance:
 
 - client
-- server
+- server-go
+- server-js
 
 
-The `client` folder is the front-end, which is the basic skeleton of a React app generated using `npx create-react-app`.
+The `client` folder is the front-end, which is bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-The `server` folder is a basic Go API built using Gin-Gonic `https://github.com/gin-gonic/gin`  which runs on port `8000` and will connect to MongoDB on `localhost:27017` (which is set up with docker). This contains some pre-existing data that is stored in the `data` folder.
+The `server-js` folder is a basic express app which runs on port `8000` and will connect to MongoDB on `localhost:27017` (which is set up with docker). This contains some pre-existing data that is stored in the `data` folder.
+
+The `server-go` folder is the server, which is bootstrapped with [ Gin-Gonic](https://github.com/gin-gonic/gin), which runs on port `8000` and will connect to MongoDB on `localhost:27017` (which is set up with docker). This contains some pre-existing data that is stored in the `data` folder.
+
 
 ### To be done before interview
 
@@ -33,11 +37,18 @@ Before the interview, please go ahead with running the setup script.
 In order to validate that you are properly setup after running the setup script you can perform the following steps:
 
 - Open two terminal windows (one for the client, one for the server)
+- NOTE: You will be asked to pick either the Go or JS server as part of the coding practice. It's your choice.
 
-Window 1:
+Window 1: (if Go)
 ```sh
-cd server
-./server
+cd server-go
+./server-go
+```
+
+Window 1: (if JS)
+```sh
+cd server-js
+npm start
 ```
 
 Window 2:
@@ -48,9 +59,8 @@ npm run start
 
 At this point you should have a server running on port `localhost:8000` and a client running on `localhost:3000`
 
-You should now be able to navigate to `localhost:3000/` in your browser.
-
+You should now be able to navigate to `localhost:3000/` in your browser. The browsers console should print the resutl from the health endpoint if everything is working
 
 ### Troubleshooting
 
-If you have any issues getting the project set up, feel free to send me an email at <jl@crownsterling.io>.
+If you have any issues getting the project set up, feel free to email me at <jl@crownsterling.io>.

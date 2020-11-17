@@ -1,6 +1,8 @@
 import axios from "axios";
 import { environment } from "./env";
 
+const USER_ID = '5fb45a8f2f831603b9d4f32c';
+
 function client(baseUrl) {
     return axios.create({
         baseURL: baseUrl,
