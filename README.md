@@ -63,40 +63,33 @@ You should now be able to navigate to `localhost:3000/` in your browser. The bro
 
 ### Go installation for Mac
     
- Install Golang  
+ Install Golang   <br />
     ```sh 
-        brew update 
-    ```
-    ```sh 
+        brew update    
+
         brew install go
-    ```
- Copy and Paste the following environment values to ~/.bash_profile 
+    ``` 
+ Add the following environment values to ~/.bash_profile   <br />
     ```sh
-        export GOPATH=$HOME/go 
-    ```    
-    ```sh 
+        export GOPATH=$HOME/go   
+    
         export GOROOT=/usr/local/opt/go/libexec
-    ```
-    ```sh
+
         export PATH=$PATH:$GOPATH/bin
-    ```
-    ```sh 
+    
         export PATH=$PATH:$GOROOT/bin
     ```
- Update your environment values 
+ Update your environment values  <br />
     ```sh 
         source ~/.bash_profile
     ```
- Make a directory for your Golang projects with this exact path
+ Make a directory for your Golang projects with this exact path <br />
     ```sh 
         mkdir -p ~/go/src/crownsterlingllc/
     ```
- Change directory into ~/go/src/crownsterlingllc/
+ Change directory into ~/go/src/crownsterlingllc/ and clone project  <br />
     ```sh 
         cd ~/go/src/crownsterlingllc/
-    ```
- Clone this project
-    ```sh  
         git clone https://github.com/PROJECT_URL
     ```
 
