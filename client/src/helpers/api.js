@@ -18,6 +18,12 @@ function health() {
     );
 }
 
+function users(id) {
+    return client(environment.service.base, null).get(
+        environment.service.routes.users + "/" + id,
+    );
+}
 export const api = {
     health,    
+    users
 };
