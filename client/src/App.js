@@ -22,7 +22,7 @@ function App() {
 
   return (
     <div className="App">
-        {healthError&&<div>Somthing is not working...</div>}
+        {healthError&&<div>Something is not working...</div>}
         {health&&<div>Healthy</div>}
     </div>
   );

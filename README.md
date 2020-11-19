@@ -10,9 +10,9 @@ sh setup.sh
 
 You should have the following installed on your machine:
 
-- Golang (version 1.14.4 preferably)
-- Node (version 12 preferably)
-- Docker
+- [Go](https://golang.org)(version 1.14.4 preferably)
+- [Node](https://nodejs.org/en/) (version 12 preferably)
+- [Docker](https://www.docker.com)
 
 ### Overview
 
@@ -42,6 +42,7 @@ In order to validate that you are properly setup after running the setup script 
 Window 1: (if Go)
 ```sh
 cd server-go
+go build .
 ./server-go
 ```
 
