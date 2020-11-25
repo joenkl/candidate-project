@@ -2,7 +2,7 @@ import chai, { expect } from 'chai';
 import express from 'express';
 import sinon from 'sinon';
 
-import Session from './models/Session';
+import User from './models/User';
 
 import { routes } from '.';
 
@@ -24,7 +24,7 @@ describe('/', () => {
 
   beforeEach(() => {
     // Stubs go here
-    enrichedSessionFindOneStub = sinon.stub(Session, 'findOne');
+    enrichedSessionFindOneStub = sinon.stub(User, 'findOne');
   });
 
   afterEach(() => {
