@@ -1,3 +1,17 @@
+## Technical Interview 
+
+This will be simulation of the type of work that you would get working at Crown Sterling.  The panel will present a ticket that lists out the Acceptance/Technical/Testing criteria for the problem.  The team will work with the candidate in a paired but autonomous manner to work through the problem (much like they would while working on the same team).  After an hour or so we’ll take a break and determine to let the candidate continue on the problem or expand on the coding problem by letting the candidate do something of their own and further demonstrate their skills.
+
+
+### Prerequisites
+
+You should have the following installed on your machine:
+
+- [Go](https://golang.org)(version 1.14.4 preferably, see Go installation for Mac below for installation troubleshooting)
+- [Node](https://nodejs.org/en/) (version 12 preferably)
+- [Docker](https://www.docker.com)
+
+
 ## Setup
 
 In order to get the basic setup we have provided a shell script to install packages and setup MongoDB. You can run the following script in your shell:
@@ -5,14 +19,6 @@ In order to get the basic setup we have provided a shell script to install packa
 ```sh
 sh setup.sh
 ```
-
-### Prerequisites
-
-You should have the following installed on your machine:
-
-- [Go](https://golang.org)(version 1.14.4 preferably)
-- [Node](https://nodejs.org/en/) (version 12 preferably)
-- [Docker](https://www.docker.com)
 
 ### Overview
 
@@ -39,14 +45,14 @@ In order to validate that you are properly setup after running the setup script 
 - Open two terminal windows (one for the client, one for the server).
 - NOTE: You will be asked to pick either the Go or JS server as part of the coding practice. It's your choice.
 
-Window 1: (if Go)
+Window 1: (NOTE: if Go)
 ```sh
 cd server-go
 go build .
 ./server-go
 ```
 
-Window 1: (if JS)
+Window 1: (NOTE: if JS)
 ```sh
 cd server-js
 npm start
