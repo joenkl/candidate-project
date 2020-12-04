@@ -4,10 +4,10 @@
   "description": "A server",
   "main": "src/index.js",
   "scripts": {
-    "test": "node --require '@babel/register' src/tests.js",
+    "test": "node --require @babel/register src/tests.js",
     "coverage": "nyc npm test",
     "start-mongo": "docker run --name some-mongo -p 27017:27017 -v $PWD/db-data:/data/db -d mongo",
-    "start": "nodemon --require '@babel/register' src/index.js",
+    "start": "nodemon --require @babel/register src/index.js",
     "lint": "eslint src"
   },
   "author": "",
