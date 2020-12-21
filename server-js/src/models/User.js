@@ -10,6 +10,7 @@ export const userSchema = new mongoose.Schema(
     street:  { type: String, required: [true, 'Street is required'] },
     company:  { type: String, required: [true, 'Company is required'] },
     title:  { type: String, required: [true, 'Title is required'] },
+    email: {type: String, required: [false] }
   },
   {
     timestamps: true,

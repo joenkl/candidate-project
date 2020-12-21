@@ -10,3 +10,13 @@
   color: white;
 }
 
+.user-card {
+  background-color:  white;
+  width: 500px;
+  border: 1px solid white;
+  border-radius: 10%;
+  color: black;
+  text-align: left;
+  padding: 15px;
+}
+

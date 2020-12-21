@@ -23,7 +23,18 @@ function users(id) {
         environment.service.routes.users + "/" + id,
     );
 }
+
+function updateUserEmail(id, email) {
+    return client(environment.service.base, null).put(
+        environment.service.routes.editUser,
+        {
+            id,
+            email
+        }
+    );
+}
 export const api = {
-    health,    
-    users
+    health,
+    users,
+    updateUserEmail
 };

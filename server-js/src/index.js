@@ -2,6 +2,7 @@ import express, { Router } from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
+import * as _ from 'lodash'
 import User from './models/User';
 
 const PORT = 8000;
@@ -31,10 +32,10 @@ export const routes = () => {
        */
       async (req, res) => {
         var id = mongoose.Types.ObjectId(req.params.id);
-        const user = await User.findOne({"_id":id},(err,doc)=>{
-          if (err){
+        const user = await User.findOne({ "_id": id }, (err, doc) => {
+          if (err) {
             return res.status(400).send(err);
-          }else {
+          } else {
             return res.send(doc);
           }
         });
@@ -50,10 +51,10 @@ export const routes = () => {
        */
       async (req, res) => {
         const user = new User(req.body)
-        user.save((err,doc)=>{
-          if (err){
+        user.save((err, doc) => {
+          if (err) {
             return res.status(400).send(err.message);
-          }else {
+          } else {
             return res.send(doc);
           }
         });
@@ -64,6 +65,26 @@ export const routes = () => {
    * Create endpoints here
    * 
    */
+
+  api.put('/edit-user',
+    wrapErrors(
+      async (req, res) => {
+        const { id, email } = req.body;
+        if (!id || !email) {
+          return res.status(400).send('User Id and email are required');
+        }
+
+        const userId = mongoose.Types.ObjectId(id);
+        const user = await User.findByIdAndUpdate(userId, { email }, (err, data) => {
+          if (err) {
+            return res.status(400).send(err);
+          }
+        })
+
+        res.status(200).send(user)
+      }
+    )
+  )
   return api;
 };
 
@@ -74,7 +95,7 @@ app.use(routes());
 
 const start = async () => {
   try {
-    await mongoose.connect('mongodb://localhost:27017/db', {useNewUrlParser: true, useUnifiedTopology: true});
+    await mongoose.connect('mongodb://localhost:27017/db', { useNewUrlParser: true, useUnifiedTopology: true });
     app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
   } catch (err) {
     console.log(err);

@@ -1,6 +1,8 @@
 import {useEffect, useState} from 'react';
+import { BrowserRouter, Switch, Route  } from 'react-router-dom'
 import {api} from './helpers/api';
 import './App.css';
+import UserCards from './components/UserCards';
 
 function App() {
   const [health,setHealth] = useState(null);
@@ -24,6 +26,11 @@ function App() {
     <div className="App">
         {healthError&&<div>Something is not working...</div>}
         {health&&<div>Healthy</div>}
+        <BrowserRouter  >
+          <Switch>
+            <Route path="/:id" children={<UserCards />} />
+          </Switch>
+        </BrowserRouter >
     </div>
   );
 }
