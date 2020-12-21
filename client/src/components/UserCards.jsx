@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import { isUndefined, isEmpty, get } from 'lodash';
 import { api } from '../helpers/api';
 import EmailEditForm from './EmailEditForm';
+import UserCardField from './UserCardField';
+
 
 export default function UserCards() {
   const { id } = useParams();
@@ -39,18 +41,15 @@ export default function UserCards() {
   return (
     <>
       <div className='user-card'>
-        <div>First Name: {userData.firstName}</div>
-        <div>Last Name: {userData.lastName}</div>
-        <div>Email: {userData.email}</div>
-        <div>Company: {userData.company}</div>
-        <div>Title: {userData.title}</div>
-        <div>
-          Address: {userData.street} {userData.city} {userData.state},{' '}
-          {userData.zipCode}
-        </div>
+        <UserCardField title={"First Name"} info={userData.firstName} />
+        <UserCardField title={"Last Name"} info={userData.lastName} />
+        <UserCardField title={"Email"} info={userData.email} />
+        <UserCardField title={"Company"} info={userData.company} />
+        <UserCardField title={"Title"} info={userData.title} />
+        <UserCardField title={"Address"} info={userData.street + ', ' + userData.city + ', ' + userData.state + ' ' + userData.zipCode} />
       </div>
       <div className ="edit-email">
-        <button type='button' onClick={onEditButtonClick}>{editButtonText}</button>
+        <button type='button' className="edit-email-button" onClick={onEditButtonClick}>{editButtonText}</button>
         { isEditingEmail && <EmailEditForm id={id} setUserData={setUserData} />}
       </div>
     </>

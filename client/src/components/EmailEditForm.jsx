@@ -7,7 +7,8 @@ function EmailEditForm(props) {
   const [textValue, setTextValue] = useState('');
   const [error, setError] = useState('');
   const [isSuccess, setIsSuccess] = useState(false);
-  const onUpdateEmail = async () => {
+  const onUpdateEmail = async (e) => {
+    e.preventDefault();
     try {
       const res = await api.updateUserEmail(id, textValue);
       const userData = get(res, 'data');
@@ -23,21 +24,24 @@ function EmailEditForm(props) {
   };
 
   return (
-      <div className='edit-email'>
-        <label htmlFor='email'>Email:</label>
+    <>
+      <form className='edit-email-field' onSubmit={onUpdateEmail}>
+        <label className="edit-email-field-label" htmlFor='email'>Email:</label>
         <input
           type='text'
           id='email'
           name='email'
+          className="edit-email-field-input"
           value={textValue}
           onChange={(e) => setTextValue(e.target.value)}
         />
-        <button type='button' onClick={onUpdateEmail}>
-          Submit{' '}
+        <button className="edit-email-field-button" type='submit'>
+          Submit
         </button>
-        {!isEmpty(error) && <div>{error}</div>}
-        {isSuccess && <div>Update Success</div>}
-      </div>
+      </form>
+      {!isEmpty(error) && <div className="form-message error-message">{error.name}: {error.message}</div>}
+      {isSuccess && <div className="form-message success-message">Updated</div>}
+    </>
   );
 }
 

@@ -11,12 +11,77 @@
 }
 
 .user-card {
+  margin: 10px 0;
   background-color:  white;
-  width: 500px;
+  width: 42%;
   border: 1px solid white;
-  border-radius: 10%;
+  border-radius: 5px;
   color: black;
   text-align: left;
   padding: 15px;
 }
 
+.user-card-field-title {
+  font-weight: bold;
+}
+
+.user-card-field-info {
+  margin: 0 0 0 10px;
+}
+
+.edit-email {
+  width: 42%;
+}
+button {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: 1px transparent;
+  border-radius: 2px;
+}
+.edit-email-button {
+  background-color: #e0574e; /* Green */
+
+  color: white;
+  padding: 15px 32px;
+}
+
+.edit-email-field {
+  margin: 50px 0 0 0;
+}
+.edit-email-field-label {
+  display: inline-block;
+  width: 100px;
+  vertical-align: middle;
+}
+
+.edit-email-field-button {
+  height: 40px;
+  margin: 0 0 0 10px;
+  background-color: #f0f0f0;
+}
+
+.edit-email-field-input {
+  height: 34px;
+}
+
+.form-message {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.success-message {
+  color: #6cac5c;
+}
+
+.error-message {
+  color: #d84040;
+}
+
+@media only screen and (max-width: 600px) {
+  .edit-email-field-input,
+  .edit-email-field-button {
+   margin-top: 10px;
+  }
+}
