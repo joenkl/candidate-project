@@ -26,6 +26,7 @@ function App() {
     <div className="App">
         {healthError&&<div>Something is not working...</div>}
         {health&&<div>Healthy</div>}
+        {"Accessing User Profile card page with url/:id"}
         <BrowserRouter  >
           <Switch>
             <Route path="/:id" children={<UserCards />} />
